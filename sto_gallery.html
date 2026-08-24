@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#5b5f5f;
+}
+
+/* Open Button */
+.openbtn{
+    font-size:24px;
+    cursor:pointer;
+    background:#2e3338;
+    color:white;
+    border-color:rgb(172, 94, 218);
+    padding:10px 15px;
+    margin:15px;
+    border-radius:8px;
+}
+
+/* Sidebar */
+.sidebar{
+    
+    height:100%;
+    width:280px;
+    position:fixed;
+    top:0;
+    left:-280px;
+    background:linear-gradient(180deg,#17191b,#17191b);
+    overflow-x:hidden;
+    transition:0.4s;
+    padding-top:20px;
+    box-shadow:4px 0 15px rgba(0,0,0,0.3);
+}
+
+.sidebar .closebtn{
+    position:absolute;
+    top:8px;
+    right:20px;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+    
+}
+
+.logo{
+    color:white;
+    text-align:center;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+    margin:8px 15px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.2);
+    transform:translateX(8px);
+}
+
+.content{
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(146, 17, 17, 0.1);
+    margin-top:20px;
+}
+</style>
+    
+    </head>
+    <body>
+        <button class="openbtn" onclick="openNav()">☰ Menu</button>
+
+<div id="mySidebar" class="sidebar">
+
+    <span class="closebtn" onclick="closeNav()">✖</span>
+
+    <div class="logo" style="color: rgb(154, 102, 209);" >Gallery</div>
+
+    <a href="home.html">🏠 Home</a>
+    <a href="">👨‍👩‍👧 Family Members</a>
+    <a href="#">📷 Photos</a>
+    <a href="#">🎥 Videos</a>
+    <a href="#">📄 Documents</a>
+    <a href="#">⚙ Settings</a>
+    <a href="#">🚪 Logout</a>
+    
+    
+
+</div>
+<div class="content">
+    <h1>Welcome to Family Storage</h1>
+
+    <div class="card">
+        <h2>Dashboard</h2>
+        <p>Store and manage family memories securely.</p>
+    </div>
+</div>
+<script>
+function openNav() {
+    const sidebar=document.getElementByclass("mySidebar");
+    console.log(sidebar);
+    sidebar.style.left="0";
+
+}
+
+
+function closeNav() {
+    document.getElementById("mySidebar").style.left = "-286";
+}
+</script>
+    </body>
+</html>

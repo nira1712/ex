@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <style>
+            form{
+                background-color: rgb(112, 85, 26);
+                border:4px;
+                border-style:dotted;
+                width: 200px;
+                height: 150px;
+                padding: 35px;
+                padding-top: 25px;
+                padding-bottom: 150px;
+                padding-right: 60px;
+                box-shadow: 0 0 25px rgb(226, 210, 136);
+                opacity: 0.8;
+                
+                
+            }
+            label{
+                color: rgb(199, 231, 241);
+            }
+            body{
+                padding-top: 140px;
+                background-color: rgb(7, 7, 7);
+                background-image: url("image1.jpg");
+            }
+           input{
+            box-sizing: border-box;
+            background-color: rgb(211, 210, 209);
+            border: 1px solid rgb(206, 188, 131);
+            box-shadow: 0 0 7px rgb(17, 14, 4);
+           }
+         input{
+            box-sizing: border-box;
+            background-color: rgb(143, 200, 204);
+            border: 1px solid rgb(206, 188, 131);
+            box-shadow: 0 0 7px rgb(17, 14, 4);
+           }
+          
+           
+        </style>
+        <script>
+            function validateForm()
+            {
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("email").value;   
+                let phone=document.getElementById("phone").value;
+                let address=document.getElementById("address").value;   
+                let dob=document.getElementById("dob").value;
+                let password=document.getElementById("password").value;
+
+                 if(name=="")
+                 {
+                    alert("Please enter your name");
+                    return false;   
+                 }
+                    if(email=="")
+                    {
+                        alert("Please enter your email");
+                        return false;   
+                    }
+                    if(phone=="")
+                    {
+                        alert("Please enter your phone number");
+                        return false;   
+                    }
+                    if(address=="")
+                    {
+                        alert("Please enter your address");
+                        return false;   
+                    }
+                    if(dob=="")
+                    {
+                        alert("Please enter your date of birth");
+                        return false;   
+                    }
+                    if(password=="")
+                    {
+                        alert("Please enter your password");
+                        return false;   
+                    }
+                    alert("Regitered successfully!");
+                    return true;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <center>
+   
+             <form action="sto_gallery.html"  onsubmit="return validateForm();" style="background-color: #19171b;">
+                <table>
+                
+                    <h2 style="color: hwb(43 25% 41%);"> <b><u>New Register</u></b></h2>
+            <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td> <input type="text" id="name" name="name" placeholder="Name"  ></td>
+            </tr>
+            <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td> <input type="text" id="email" name="email" placeholder="Email"  ></td>
+            </tr>
+            <tr>
+                    <td> <label for="phone">Phone:</label></td>
+                    <td><input type="text" id="phone" name="phone" placeholder="Phone"  ></td>
+            </tr>
+            <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><input type="text"  id="address" name="address" placeholder="Address"  ></td>
+            </tr>
+            <tr>
+                    <td> <label for="dob">Date of Birth:</label></td>
+                    <td> <input type="Date"  id = "dob" name="dob" placeholder="Date of Birth"  ></td>
+            </tr>
+            <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" placeholder="Password"  ></td> 
+            </tr>
+                                    
+                </table>                <br>
+                <td><input type="submit" value="Register" style="background-color:lab(48.25% 4.52 18.28); "></td>
+            </form>
+        </center>
+    </body>
+</html>
